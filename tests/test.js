@@ -30,7 +30,7 @@ describe("People", () => {
           res.should.have.status(201);
           res.body.should.contain({ message: "A person record was added." });
           this.lastIndex = res.body.index;
-          console.log(this.lastIndex);
+          // console.log(this.lastIndex);
           done();
         });
     });
@@ -55,7 +55,7 @@ describe("People", () => {
         .get(`/api/v1/people/${this.lastIndex}`)
         .end((err, res) => {
           res.should.have.status(200);
-          console.log(res.body)
+          // console.log(res.body)
           res.body.name.should.be.eql("Tammam");
           done();
         });

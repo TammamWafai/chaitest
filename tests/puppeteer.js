@@ -56,7 +56,7 @@ chai.should();
         const resultData = await (
           await this.resultHandle.getProperty("textContent")
         ).jsonValue();
-        console.log("at 1, resultData is ", resultData);
+        // console.log("at 1, resultData is ", resultData);
         resultData.should.include("A person record was added");
         const { index } = JSON.parse(resultData);
         this.lastIndex = index;
@@ -69,7 +69,7 @@ chai.should();
         const resultData = await (
           await this.resultHandle.getProperty("textContent")
         ).jsonValue();
-        console.log("at 2, resultData is ", resultData);
+        // console.log("at 2, resultData is ", resultData);
         resultData.should.include("Please enter an age.");
       });
       it("should return the entries just created", async function () {
@@ -78,7 +78,7 @@ chai.should();
         const resultData = await (
           await this.resultHandle.getProperty("textContent")
         ).jsonValue();
-        console.log("at 3, resultData is ", resultData);
+        // console.log("at 3, resultData is ", resultData);
         resultData.should.include("Fred");
       });
       it("should return the last entry.", async function () {
@@ -88,7 +88,7 @@ chai.should();
         const resultData = await (
           await this.resultHandle.getProperty("textContent")
         ).jsonValue();
-        console.log("at 4, resultData is ", resultData);
+        // console.log("at 4, resultData is ", resultData);
         resultData.should.include("Fred");
       });
     });
